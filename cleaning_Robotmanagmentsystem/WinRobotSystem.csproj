@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0350C538-8642-4392-96FB-4090FAA402FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinRobotSystem</RootNamespace>
+    <AssemblyName>WinRobotSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="统计报表\FrmReportRobotPlanCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="统计报表\FrmReportRobotPlanCount.Designer.cs">
+      <DependentUpon>FrmReportRobotPlanCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="统计报表\FrmReportRobotShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="统计报表\FrmReportRobotShip.Designer.cs">
+      <DependentUpon>FrmReportRobotShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="机器人管理\FrmRobotOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="机器人管理\FrmRobotOper.Designer.cs">
+      <DependentUpon>FrmRobotOper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="货物\FrmGoodsOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="货物\FrmGoodsOper.Designer.cs">
+      <DependentUpon>FrmGoodsOper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="路径规划\FrmPlanOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="路径规划\FrmPlanOper.Designer.cs">
+      <DependentUpon>FrmPlanOper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="干散货船\FrmShipOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="干散货船\FrmShipOper.Designer.cs">
+      <DependentUpon>FrmShipOper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户管理\FrmUserOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户管理\FrmUserOper.Designer.cs">
+      <DependentUpon>FrmUserOper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="机器人管理\FrmRobotView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="机器人管理\FrmRobotView.Designer.cs">
+      <DependentUpon>FrmRobotView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="路径规划\FrmPlanView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="路径规划\FrmPlanView.Designer.cs">
+      <DependentUpon>FrmPlanView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="货物\FrmGoodsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="货物\FrmGoodsView.Designer.cs">
+      <DependentUpon>FrmGoodsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="干散货船\FrmShipView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="干散货船\FrmShipView.Designer.cs">
+      <DependentUpon>FrmShipView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户管理\FrmUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户管理\FrmUserView.Designer.cs">
+      <DependentUpon>FrmUserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="统计报表\FrmReportRobotPlanCount.resx">
+      <DependentUpon>FrmReportRobotPlanCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="统计报表\FrmReportRobotShip.resx">
+      <DependentUpon>FrmReportRobotShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="机器人管理\FrmRobotOper.resx">
+      <DependentUpon>FrmRobotOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="货物\FrmGoodsOper.resx">
+      <DependentUpon>FrmGoodsOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="路径规划\FrmPlanOper.resx">
+      <DependentUpon>FrmPlanOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="干散货船\FrmShipOper.resx">
+      <DependentUpon>FrmShipOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户管理\FrmUserOper.resx">
+      <DependentUpon>FrmUserOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="机器人管理\FrmRobotView.resx">
+      <DependentUpon>FrmRobotView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="路径规划\FrmPlanView.resx">
+      <DependentUpon>FrmPlanView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="货物\FrmGoodsView.resx">
+      <DependentUpon>FrmGoodsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="干散货船\FrmShipView.resx">
+      <DependentUpon>FrmShipView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户管理\FrmUserView.resx">
+      <DependentUpon>FrmUserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
